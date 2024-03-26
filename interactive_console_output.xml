@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20240322 16:28:15.452" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Markus\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Dado que eu faça o login no vendas net">
+<msg timestamp="20240322 16:28:16.126" level="FAIL">No keyword with name 'Dado que eu faça o login no vendas net' found.</msg>
+<status status="FAIL" starttime="20240322 16:28:16.126" endtime="20240322 16:28:16.126"/>
+</kw>
+<kw name="Faço login e insiro o cod do cliente 777778">
+<status status="NOT RUN" starttime="20240322 16:28:16.127" endtime="20240322 16:28:16.127"/>
+</kw>
+<kw name="Clico em novo pedido">
+<status status="NOT RUN" starttime="20240322 16:28:16.128" endtime="20240322 16:28:16.129"/>
+</kw>
+<kw name="Adiciono a Forma de pagamento &quot;1621&quot;">
+<status status="NOT RUN" starttime="20240322 16:28:16.130" endtime="20240322 16:28:16.130"/>
+</kw>
+<kw name="Busco pelo produto (VN) &quot;2223049&quot;">
+<status status="NOT RUN" starttime="20240322 16:28:16.132" endtime="20240322 16:28:16.132"/>
+</kw>
+<kw name="Adiciono 1 unidade">
+<status status="NOT RUN" starttime="20240322 16:28:16.135" endtime="20240322 16:28:16.135"/>
+</kw>
+<kw name="Clico em ir para o carrinho">
+<status status="NOT RUN" starttime="20240322 16:28:16.136" endtime="20240322 16:28:16.136"/>
+</kw>
+<kw name="Sem aplicar desconto clico em prosseguir e confirmar">
+<status status="NOT RUN" starttime="20240322 16:28:16.137" endtime="20240322 16:28:16.137"/>
+</kw>
+<kw name="Entao visualizo a tela de historico de pedidos">
+<status status="NOT RUN" starttime="20240322 16:28:16.138" endtime="20240322 16:28:16.138"/>
+</kw>
+<status status="PASS" starttime="20240322 16:28:15.491" endtime="20240322 16:28:17.517"/>
+</kw>
+<status status="PASS" starttime="20240322 16:28:15.491" endtime="20240322 16:28:17.517"/>
+</test>
+<status status="PASS" starttime="20240322 16:28:15.462" endtime="20240322 16:28:17.518"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

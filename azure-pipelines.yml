@@ -1,0 +1,59 @@
+trigger:
+  branches:
+    include:
+      - master
+
+pr:
+  branches:
+    exclude:
+      - '*'
+
+  
+pool:
+  vmImage: 'windows-latest'
+
+jobs:
+
+
+- job: RunTests
+  displayName: 'Run Selenium Tests'
+  steps:
+  - checkout: self
+  
+
+  - script: |
+      pip install --upgrade pip
+      chcp 65001
+      $env:PYTHONIOENCODING="UTF-8"
+      $env:LC_ALL='en_US.UTF-8'
+      pip install -r requirements.txt
+      npx --quiet playwright install
+      python -m Browser.entry init
+      encoding: UTF-8
+      robot -d .\logs\     tests\Fluxos.robot
+    displayName: 'Install Dependencies and Run Robot Framework Tests'
+
+  - script: 
+      robot -d ./logs -x output-xunit.xml tests
+    displayName: 'Run UI Tests'
+    workingDirectory: $(Build.SourcesDirectory)
+    continueOnError: true
+  
+  
+
+  
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat:  'JUnit'
+      testResultsFiles: 'logs/output-xunit.xml'
+    displayName: 'Publish Test Results'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: $(Build.SourcesDirectory)
+      artifactName: 'drop'
+
+
+
+
+

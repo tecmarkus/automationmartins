@@ -1,0 +1,1478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20240307 16:50:23.440" rpa="false" schemaversion="3">
+<suite id="s1" name="Fluxos" source="D:\OneDrive\Martins\Repos\portal\tests\portalOperador\Fluxos.robot">
+<test id="s1-t1" name="Caso de teste 01 - Pedido" line="14">
+<kw name="Abrir o navegador" library="keywords_pedidos" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>15</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20240307 16:50:23.775" endtime="20240307 16:50:23.775"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240307 16:50:23.776" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240307 16:50:23.775" endtime="20240307 16:50:25.667"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240307 16:50:25.667" endtime="20240307 16:50:25.798"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>*Início teste.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:50:25.799" endtime="20240307 16:50:25.799"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:23.774" endtime="20240307 16:50:25.799"/>
+</kw>
+<kw name="Dado que eu faça o login no portal operador" library="keywords_pedidos">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240307 16:50:25.799" endtime="20240307 16:50:25.801"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240307 16:50:25.801" level="INFO">Opening url 'https://vendas-hom.martinsatacado.com.br/vendas'</msg>
+<status status="PASS" starttime="20240307 16:50:25.801" endtime="20240307 16:50:27.127"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${idrede}</arg>
+<arg>PSANF040</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:27.129" level="INFO">Typing text 'PSANF040' into text field '//input[contains(@placeholder,'Digite o ID de rede')]'.</msg>
+<status status="PASS" starttime="20240307 16:50:27.127" endtime="20240307 16:50:27.277"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SenhaRede}</arg>
+<arg>ANA@laine9993</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:27.279" level="INFO">Typing text 'ANA@laine9993' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20240307 16:50:27.277" endtime="20240307 16:50:27.405"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:50:27.609" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:50:27.406" endtime="20240307 16:50:27.609"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnContinuar}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:28.612" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:27.611" endtime="20240307 16:50:28.612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:28.612" endtime="20240307 16:50:28.646"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:28.647" level="INFO">Clicking element '//button[contains(.,'Continuar')]'.</msg>
+<status status="PASS" starttime="20240307 16:50:28.647" endtime="20240307 16:50:28.684"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:27.609" endtime="20240307 16:50:28.684"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:25.799" endtime="20240307 16:50:28.684"/>
+</kw>
+<kw name="Insiro o codigo do cliente &quot;1209872&quot;" library="keywords_pedidos" sourcename="Insiro o codigo do cliente &quot;${codcli}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Insiro o codigo do cliente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:50:28.685" endtime="20240307 16:50:28.685"/>
+</kw>
+<kw name="sleeping" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:31.686" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240307 16:50:28.686" endtime="20240307 16:50:31.686"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:28.686" endtime="20240307 16:50:31.687"/>
+</kw>
+<kw name="esperar" library="keywords">
+<arg>${CampoCodCliente}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:31.688" endtime="20240307 16:50:31.717"/>
+</kw>
+<msg timestamp="20240307 16:50:31.717" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20240307 16:50:31.687" endtime="20240307 16:50:31.717"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:33.719" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:50:31.718" endtime="20240307 16:50:33.719"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:31.717" endtime="20240307 16:50:33.719"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:33.719" endtime="20240307 16:50:33.719"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:33.720" endtime="20240307 16:50:33.720"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:33.720" endtime="20240307 16:50:33.720"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:33.720" endtime="20240307 16:50:33.720"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:50:33.720" endtime="20240307 16:50:33.720"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:33.721" endtime="20240307 16:50:33.721"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:50:33.720" endtime="20240307 16:50:33.721"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:50:33.720" endtime="20240307 16:50:33.721"/>
+</if>
+<status status="NOT RUN" starttime="20240307 16:50:33.719" endtime="20240307 16:50:33.721"/>
+</branch>
+<status status="PASS" starttime="20240307 16:50:31.717" endtime="20240307 16:50:33.721"/>
+</if>
+<status status="PASS" starttime="20240307 16:50:31.687" endtime="20240307 16:50:33.721"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CampoCodCliente}</arg>
+<arg>${codcli}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:33.722" level="INFO">Typing text '1209872' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20240307 16:50:33.721" endtime="20240307 16:50:33.831"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:50:33.945" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:50:33.831" endtime="20240307 16:50:33.945"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnProcurar}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:34.946" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:33.946" endtime="20240307 16:50:34.946"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:34.946" endtime="20240307 16:50:34.974"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:34.974" level="INFO">Clicking element 'search-icon-button'.</msg>
+<status status="PASS" starttime="20240307 16:50:34.974" endtime="20240307 16:50:35.027"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:33.945" endtime="20240307 16:50:35.027"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:28.685" endtime="20240307 16:50:35.027"/>
+</kw>
+<kw name="acesso o menu" library="keywords_pedidos">
+<kw name="click." library="keywords">
+<arg>${BtnMenu}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:36.029" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:35.029" endtime="20240307 16:50:36.029"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:36.029" endtime="20240307 16:50:36.060"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:36.062" level="INFO">Clicking element '//button[@id='open-menu-button']'.</msg>
+<status status="PASS" starttime="20240307 16:50:36.060" endtime="20240307 16:50:36.166"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:35.028" endtime="20240307 16:50:36.167"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:35.027" endtime="20240307 16:50:36.167"/>
+</kw>
+<kw name="Adiciono o produto &quot;2222045&quot; (PDP)" library="keywords_pedidos" sourcename="Adiciono o produto &quot;${ProdMartins}&quot; (PDP)">
+<kw name="esperar" library="keywords">
+<arg>${BtnRealizarVenda}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:36.169" endtime="20240307 16:50:36.194"/>
+</kw>
+<msg timestamp="20240307 16:50:36.195" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20240307 16:50:36.168" endtime="20240307 16:50:36.195"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:38.196" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:50:36.195" endtime="20240307 16:50:38.196"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:36.195" endtime="20240307 16:50:38.196"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:38.196" endtime="20240307 16:50:38.196"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:38.196" endtime="20240307 16:50:38.196"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:38.196" endtime="20240307 16:50:38.196"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:38.196" endtime="20240307 16:50:38.196"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:50:38.196" endtime="20240307 16:50:38.196"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:38.197" endtime="20240307 16:50:38.197"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:50:38.197" endtime="20240307 16:50:38.197"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:50:38.196" endtime="20240307 16:50:38.197"/>
+</if>
+<status status="NOT RUN" starttime="20240307 16:50:38.196" endtime="20240307 16:50:38.197"/>
+</branch>
+<status status="PASS" starttime="20240307 16:50:36.195" endtime="20240307 16:50:38.197"/>
+</if>
+<status status="PASS" starttime="20240307 16:50:36.168" endtime="20240307 16:50:38.197"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnRealizarVenda}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:39.199" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:38.198" endtime="20240307 16:50:39.199"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:39.199" endtime="20240307 16:50:39.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:39.256" level="INFO">Clicking element '//button[contains(.,'Realizar Venda')]'.</msg>
+<status status="PASS" starttime="20240307 16:50:39.255" endtime="20240307 16:50:39.306"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:38.197" endtime="20240307 16:50:39.306"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Adiciono o produto</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:50:39.306" endtime="20240307 16:50:39.306"/>
+</kw>
+<kw name="sleeping" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:42.307" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240307 16:50:39.306" endtime="20240307 16:50:42.307"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:39.306" endtime="20240307 16:50:42.307"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CampoBusca}</arg>
+<arg>${ProdMartins}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:42.307" level="INFO">Typing text '2222045' into text field '//input[@placeholder='Digite o nome ou o código do produto']'.</msg>
+<status status="PASS" starttime="20240307 16:50:42.307" endtime="20240307 16:50:42.380"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${CHECKBOXlupaBuscaProd}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:43.380" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:42.380" endtime="20240307 16:50:43.380"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:43.380" endtime="20240307 16:50:43.410"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:43.411" level="INFO">Clicking element '//div[@data-testid='checkbox']'.</msg>
+<status status="PASS" starttime="20240307 16:50:43.410" endtime="20240307 16:50:43.485"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:42.380" endtime="20240307 16:50:43.485"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${CampoBusca}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:44.488" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:43.487" endtime="20240307 16:50:44.488"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:44.488" endtime="20240307 16:50:44.525"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:44.525" level="INFO">Clicking element '//input[@placeholder='Digite o nome ou o código do produto']'.</msg>
+<status status="PASS" starttime="20240307 16:50:44.525" endtime="20240307 16:50:44.682"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:43.487" endtime="20240307 16:50:44.682"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:50:44.804" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:50:44.682" endtime="20240307 16:50:44.804"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>none</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240307 16:50:44.806" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20240307 16:50:44.806" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20240307 16:50:44.806" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20240307 16:50:44.805" endtime="20240307 16:50:44.910"/>
+</kw>
+<kw name="esperar" library="keywords">
+<arg>${BtnAdcCarrinhoPDP}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:44.911" endtime="20240307 16:50:47.255"/>
+</kw>
+<msg timestamp="20240307 16:50:47.255" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20240307 16:50:44.911" endtime="20240307 16:50:47.255"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:49.256" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:50:47.256" endtime="20240307 16:50:49.256"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:47.256" endtime="20240307 16:50:49.256"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:49.256" endtime="20240307 16:50:49.256"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:49.256" endtime="20240307 16:50:49.256"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:49.257" endtime="20240307 16:50:49.257"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:49.257" endtime="20240307 16:50:49.257"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:50:49.257" endtime="20240307 16:50:49.257"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:50:49.257" endtime="20240307 16:50:49.257"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:50:49.257" endtime="20240307 16:50:49.257"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:50:49.257" endtime="20240307 16:50:49.257"/>
+</if>
+<status status="NOT RUN" starttime="20240307 16:50:49.256" endtime="20240307 16:50:49.258"/>
+</branch>
+<status status="PASS" starttime="20240307 16:50:47.255" endtime="20240307 16:50:49.258"/>
+</if>
+<status status="PASS" starttime="20240307 16:50:44.910" endtime="20240307 16:50:49.258"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnAdcCarrinhoPDP}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:50.260" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:49.258" endtime="20240307 16:50:50.260"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:50.260" endtime="20240307 16:50:50.282"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:50.283" level="INFO">Clicking element '//span[contains(.,'Adicionar ao carrinho')]'.</msg>
+<status status="PASS" starttime="20240307 16:50:50.282" endtime="20240307 16:50:50.339"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:49.258" endtime="20240307 16:50:50.339"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:36.168" endtime="20240307 16:50:50.339"/>
+</kw>
+<kw name="Vou para o carrinho" library="keywords_pedidos">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Vou para o carrinho</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:50:50.339" endtime="20240307 16:50:50.340"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:50:50.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:50:50.340" endtime="20240307 16:50:50.498"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnCarrinho}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:51.499" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:50.498" endtime="20240307 16:50:51.499"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:51.499" endtime="20240307 16:50:51.522"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:51.523" level="INFO">Clicking element '//button[@aria-label='Ícone Carrinho']'.</msg>
+<status status="PASS" starttime="20240307 16:50:51.523" endtime="20240307 16:50:51.583"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:50.498" endtime="20240307 16:50:51.584"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:50.339" endtime="20240307 16:50:51.584"/>
+</kw>
+<kw name="Clico no botão continuar" library="keywords_pedidos">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Clico no botão continuar</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:50:51.584" endtime="20240307 16:50:51.585"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BtnContinuar}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240307 16:50:51.585" endtime="20240307 16:50:52.475"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnContinuar}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:50:53.476" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:50:52.476" endtime="20240307 16:50:53.476"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:53.476" endtime="20240307 16:50:53.512"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:50:53.514" level="INFO">Clicking element '//button[contains(.,'Continuar')]'.</msg>
+<status status="PASS" starttime="20240307 16:50:53.512" endtime="20240307 16:50:53.580"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:52.475" endtime="20240307 16:50:53.580"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:51.584" endtime="20240307 16:50:53.580"/>
+</kw>
+<kw name="Clico no botão Finalizar pedido" library="keywords_pedidos">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Clico no botão finalizar pedido</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:50:53.581" endtime="20240307 16:50:53.581"/>
+</kw>
+<kw name="esperar" library="keywords">
+<arg>${BtnFinalizarPedido}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:50:53.583" endtime="20240307 16:51:08.582"/>
+</kw>
+<msg timestamp="20240307 16:51:08.582" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20240307 16:50:53.583" endtime="20240307 16:51:08.582"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:10.584" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:51:08.584" endtime="20240307 16:51:10.584"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:08.582" endtime="20240307 16:51:10.584"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:10.585" endtime="20240307 16:51:10.585"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:10.585" endtime="20240307 16:51:10.586"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:10.586" endtime="20240307 16:51:10.586"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:10.587" endtime="20240307 16:51:10.587"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:51:10.586" endtime="20240307 16:51:10.587"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:10.587" endtime="20240307 16:51:10.587"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:51:10.587" endtime="20240307 16:51:10.588"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:51:10.586" endtime="20240307 16:51:10.588"/>
+</if>
+<status status="NOT RUN" starttime="20240307 16:51:10.584" endtime="20240307 16:51:10.588"/>
+</branch>
+<status status="PASS" starttime="20240307 16:51:08.582" endtime="20240307 16:51:10.588"/>
+</if>
+<status status="PASS" starttime="20240307 16:50:53.582" endtime="20240307 16:51:10.588"/>
+</kw>
+<kw name="sleeping" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:13.591" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240307 16:51:10.589" endtime="20240307 16:51:13.591"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:10.588" endtime="20240307 16:51:13.591"/>
+</kw>
+<kw name="Rolar levemente" library="keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0, 200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240307 16:51:13.592" level="INFO">Executing JavaScript:
+window.scrollBy(0, 200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20240307 16:51:13.591" endtime="20240307 16:51:13.598"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:13.591" endtime="20240307 16:51:13.600"/>
+</kw>
+<kw name="sleeping" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:16.600" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240307 16:51:13.600" endtime="20240307 16:51:16.600"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:13.600" endtime="20240307 16:51:16.601"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnFinalizarPedido}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:17.602" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:51:16.602" endtime="20240307 16:51:17.602"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:51:17.602" endtime="20240307 16:51:17.623"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:17.623" level="INFO">Clicking element '//button[contains(.,'Finalizar Pedido')]'.</msg>
+<status status="PASS" starttime="20240307 16:51:17.623" endtime="20240307 16:51:17.685"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:16.601" endtime="20240307 16:51:17.685"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:51:17.906" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:51:17.685" endtime="20240307 16:51:17.906"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Pedido finalizado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:51:17.906" endtime="20240307 16:51:17.908"/>
+</kw>
+<status status="PASS" starttime="20240307 16:50:53.580" endtime="20240307 16:51:17.908"/>
+</kw>
+<kw name="Será exibida a mensagem &quot;Pedido realizado com sucesso!&quot;" library="keywords_pedidos" sourcename="Será exibida a mensagem &quot;${texto}&quot;">
+<kw name="esperar" library="keywords">
+<arg>${PedidoRealizado}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:51:17.910" endtime="20240307 16:51:22.798"/>
+</kw>
+<msg timestamp="20240307 16:51:22.799" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20240307 16:51:17.910" endtime="20240307 16:51:22.799"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:24.799" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:51:22.799" endtime="20240307 16:51:24.799"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:22.799" endtime="20240307 16:51:24.799"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:24.799" endtime="20240307 16:51:24.799"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:24.800" endtime="20240307 16:51:24.800"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:24.800" endtime="20240307 16:51:24.800"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:24.800" endtime="20240307 16:51:24.801"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:51:24.800" endtime="20240307 16:51:24.801"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:24.801" endtime="20240307 16:51:24.801"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:51:24.801" endtime="20240307 16:51:24.801"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:51:24.800" endtime="20240307 16:51:24.801"/>
+</if>
+<status status="NOT RUN" starttime="20240307 16:51:24.799" endtime="20240307 16:51:24.801"/>
+</branch>
+<status status="PASS" starttime="20240307 16:51:22.799" endtime="20240307 16:51:24.801"/>
+</if>
+<status status="PASS" starttime="20240307 16:51:17.909" endtime="20240307 16:51:24.801"/>
+</kw>
+<kw name="pegar texto" library="keywords">
+<arg>${PedidoRealizado}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:51:24.802" endtime="20240307 16:51:24.829"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${textGeted}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:24.856" level="INFO">${textGeted} = Pedido realizado com sucesso!</msg>
+<status status="PASS" starttime="20240307 16:51:24.830" endtime="20240307 16:51:24.856"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${textoObtido}</arg>
+<arg>${textGeted}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240307 16:51:24.857" level="INFO">${textoObtido} = Pedido realizado com sucesso!</msg>
+<status status="PASS" starttime="20240307 16:51:24.856" endtime="20240307 16:51:24.857"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${textoObtido}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:51:24.857" endtime="20240307 16:51:24.858"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:24.802" endtime="20240307 16:51:24.858"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${textoObtido}</arg>
+<arg>${texto}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240307 16:51:24.858" endtime="20240307 16:51:24.859"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:17.908" endtime="20240307 16:51:24.859"/>
+</kw>
+<kw name="Fechar o navegador" library="keywords_pedidos" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:25.860" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:51:24.860" endtime="20240307 16:51:25.860"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:51:25.963" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:51:25.860" endtime="20240307 16:51:25.963"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240307 16:51:25.963" endtime="20240307 16:51:28.146"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:24.860" endtime="20240307 16:51:28.146"/>
+</kw>
+<tag>Pedido</tag>
+<status status="PASS" starttime="20240307 16:50:23.774" endtime="20240307 16:51:28.147"/>
+</test>
+<test id="s1-t2" name="Caso de teste 02 - Pedido boleto à vista" line="26">
+<kw name="Abrir o navegador" library="keywords_pedidos" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>15</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20240307 16:51:28.150" endtime="20240307 16:51:28.150"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240307 16:51:28.151" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240307 16:51:28.151" endtime="20240307 16:51:30.045"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240307 16:51:30.045" endtime="20240307 16:51:30.158"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>*Início teste.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:51:30.159" endtime="20240307 16:51:30.160"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:28.150" endtime="20240307 16:51:30.161"/>
+</kw>
+<kw name="Dado que eu faça o login no portal operador" library="keywords_pedidos">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240307 16:51:30.162" endtime="20240307 16:51:30.169"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240307 16:51:30.170" level="INFO">Opening url 'https://vendas-hom.martinsatacado.com.br/vendas'</msg>
+<status status="PASS" starttime="20240307 16:51:30.170" endtime="20240307 16:51:31.105"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${idrede}</arg>
+<arg>PSANF040</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:31.105" level="INFO">Typing text 'PSANF040' into text field '//input[contains(@placeholder,'Digite o ID de rede')]'.</msg>
+<status status="PASS" starttime="20240307 16:51:31.105" endtime="20240307 16:51:31.231"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SenhaRede}</arg>
+<arg>ANA@laine9993</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:31.232" level="INFO">Typing text 'ANA@laine9993' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20240307 16:51:31.231" endtime="20240307 16:51:31.344"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:51:31.511" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:51:31.344" endtime="20240307 16:51:31.511"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnContinuar}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:32.513" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:51:31.512" endtime="20240307 16:51:32.513"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:51:32.513" endtime="20240307 16:51:32.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:32.567" level="INFO">Clicking element '//button[contains(.,'Continuar')]'.</msg>
+<status status="PASS" starttime="20240307 16:51:32.567" endtime="20240307 16:51:32.607"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:31.512" endtime="20240307 16:51:32.607"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:30.161" endtime="20240307 16:51:32.607"/>
+</kw>
+<kw name="Insiro o codigo do cliente &quot;1209872&quot;" library="keywords_pedidos" sourcename="Insiro o codigo do cliente &quot;${codcli}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Insiro o codigo do cliente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:51:32.608" endtime="20240307 16:51:32.608"/>
+</kw>
+<kw name="sleeping" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:35.609" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240307 16:51:32.609" endtime="20240307 16:51:35.609"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:32.608" endtime="20240307 16:51:35.609"/>
+</kw>
+<kw name="esperar" library="keywords">
+<arg>${CampoCodCliente}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:51:35.610" endtime="20240307 16:51:35.637"/>
+</kw>
+<msg timestamp="20240307 16:51:35.637" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20240307 16:51:35.609" endtime="20240307 16:51:35.637"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:37.639" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:51:35.638" endtime="20240307 16:51:37.639"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:35.638" endtime="20240307 16:51:37.639"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:37.639" endtime="20240307 16:51:37.639"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:37.639" endtime="20240307 16:51:37.639"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:37.640" endtime="20240307 16:51:37.640"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:37.640" endtime="20240307 16:51:37.640"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:51:37.639" endtime="20240307 16:51:37.640"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:37.640" endtime="20240307 16:51:37.641"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:51:37.640" endtime="20240307 16:51:37.641"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:51:37.639" endtime="20240307 16:51:37.641"/>
+</if>
+<status status="NOT RUN" starttime="20240307 16:51:37.639" endtime="20240307 16:51:37.641"/>
+</branch>
+<status status="PASS" starttime="20240307 16:51:35.637" endtime="20240307 16:51:37.641"/>
+</if>
+<status status="PASS" starttime="20240307 16:51:35.609" endtime="20240307 16:51:37.641"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CampoCodCliente}</arg>
+<arg>${codcli}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:37.643" level="INFO">Typing text '1209872' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20240307 16:51:37.641" endtime="20240307 16:51:37.771"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:51:37.863" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:51:37.771" endtime="20240307 16:51:37.863"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnProcurar}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:38.865" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:51:37.864" endtime="20240307 16:51:38.865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:51:38.865" endtime="20240307 16:51:38.911"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:38.912" level="INFO">Clicking element 'search-icon-button'.</msg>
+<status status="PASS" starttime="20240307 16:51:38.911" endtime="20240307 16:51:39.000"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:37.864" endtime="20240307 16:51:39.000"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:32.608" endtime="20240307 16:51:39.000"/>
+</kw>
+<kw name="acesso o menu" library="keywords_pedidos">
+<kw name="click." library="keywords">
+<arg>${BtnMenu}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:40.001" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:51:39.001" endtime="20240307 16:51:40.001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:51:40.001" endtime="20240307 16:51:40.028"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:51:40.028" level="INFO">Clicking element '//button[@id='open-menu-button']'.</msg>
+<status status="PASS" starttime="20240307 16:51:40.028" endtime="20240307 16:51:40.097"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:39.001" endtime="20240307 16:51:40.097"/>
+</kw>
+<status status="PASS" starttime="20240307 16:51:39.000" endtime="20240307 16:51:40.097"/>
+</kw>
+<kw name="Verifico a forma de pagamento e altero para boleto à vista" library="keywords_pedidos">
+<kw name="esperar" library="keywords">
+<arg>${TXTFormaDePagamento}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240307 16:51:55.346" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240307 16:51:55.347" level="FAIL">Element '(//span[contains(.,'111 - PGT. À VISTA')])[2]' not visible after 15 seconds.</msg>
+<status status="FAIL" starttime="20240307 16:51:40.098" endtime="20240307 16:51:55.349"/>
+</kw>
+<msg timestamp="20240307 16:51:55.349" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20240307 16:51:40.098" endtime="20240307 16:51:55.349"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:51:55.349" endtime="20240307 16:51:55.350"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:51:55.349" endtime="20240307 16:51:55.350"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:51:57.350" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:51:55.350" endtime="20240307 16:51:57.350"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240307 16:52:12.540" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240307 16:52:12.540" level="FAIL">Element '(//span[contains(.,'111 - PGT. À VISTA')])[2]' not visible after 15 seconds.</msg>
+<status status="FAIL" starttime="20240307 16:51:57.351" endtime="20240307 16:52:12.541"/>
+</kw>
+<msg timestamp="20240307 16:52:12.541" level="INFO">${isVisible} = False</msg>
+<status status="PASS" starttime="20240307 16:51:57.351" endtime="20240307 16:52:12.541"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:12.541" endtime="20240307 16:52:12.542"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:12.542" endtime="20240307 16:52:12.542"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:52:12.541" endtime="20240307 16:52:12.542"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:52:12.542" endtime="20240307 16:52:12.542"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:12.542" endtime="20240307 16:52:12.542"/>
+</branch>
+<status status="PASS" starttime="20240307 16:52:12.541" endtime="20240307 16:52:12.542"/>
+</if>
+<status status="PASS" starttime="20240307 16:51:55.350" endtime="20240307 16:52:12.542"/>
+</branch>
+<status status="PASS" starttime="20240307 16:51:55.349" endtime="20240307 16:52:12.542"/>
+</if>
+<status status="PASS" starttime="20240307 16:51:40.098" endtime="20240307 16:52:12.542"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${TXTFormaDePagamento}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:52:12.631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240307 16:52:12.631" level="FAIL">Element with locator '(//span[contains(.,'111 - PGT. À VISTA')])[2]' not found.</msg>
+<status status="FAIL" starttime="20240307 16:52:12.543" endtime="20240307 16:52:12.633"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>*${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:12.634" endtime="20240307 16:52:12.634"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${statusPagtoBoleto}</var>
+<arg>Should Contain</arg>
+<arg>${text}</arg>
+<arg>Boleto</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:12.634" endtime="20240307 16:52:12.634"/>
+</kw>
+<if>
+<branch type="IF" condition="${statusPagtoBoleto} == True">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:12.634" endtime="20240307 16:52:12.634"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:52:12.634" endtime="20240307 16:52:12.634"/>
+</branch>
+<branch type="ELSE">
+<kw name="Alterar prerencia pagto home boleto" library="keywords_pedidos">
+<status status="NOT RUN" starttime="20240307 16:52:12.634" endtime="20240307 16:52:12.634"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:52:12.634" endtime="20240307 16:52:12.634"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:52:12.634" endtime="20240307 16:52:12.634"/>
+</if>
+<status status="FAIL" starttime="20240307 16:51:40.098" endtime="20240307 16:52:12.634"/>
+</kw>
+<kw name="Adiciono o produto &quot;martins_2222045&quot; (PDP)" library="keywords_pedidos" sourcename="Adiciono o produto &quot;${ProdMartins}&quot; (PDP)">
+<status status="NOT RUN" starttime="20240307 16:52:12.635" endtime="20240307 16:52:12.635"/>
+</kw>
+<kw name="Vou para o carrinho" library="keywords_pedidos">
+<status status="NOT RUN" starttime="20240307 16:52:12.635" endtime="20240307 16:52:12.635"/>
+</kw>
+<kw name="Clico no botão continuar" library="keywords_pedidos">
+<status status="NOT RUN" starttime="20240307 16:52:12.635" endtime="20240307 16:52:12.635"/>
+</kw>
+<kw name="Clico no botão Finalizar pedido" library="keywords_pedidos">
+<status status="NOT RUN" starttime="20240307 16:52:12.635" endtime="20240307 16:52:12.635"/>
+</kw>
+<kw name="Será exibida a mensagem &quot;Pedido realizado com sucesso!&quot;" library="keywords_pedidos" sourcename="Será exibida a mensagem &quot;${texto}&quot;">
+<status status="NOT RUN" starttime="20240307 16:52:12.635" endtime="20240307 16:52:12.635"/>
+</kw>
+<kw name="Fechar o navegador" library="keywords_pedidos" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:13.636" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:52:12.636" endtime="20240307 16:52:13.636"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:52:13.721" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:52:13.636" endtime="20240307 16:52:13.721"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240307 16:52:13.721" endtime="20240307 16:52:15.962"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:12.636" endtime="20240307 16:52:15.962"/>
+</kw>
+<tag>PedidoBoletoaVista</tag>
+<status status="FAIL" starttime="20240307 16:51:28.149" endtime="20240307 16:52:15.963">Element with locator '(//span[contains(.,'111 - PGT. À VISTA')])[2]' not found.</status>
+</test>
+<test id="s1-t3" name="Caso de teste 03 - Complemento de carga" line="40">
+<kw name="Abrir o navegador" library="keywords_pedidos" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>15</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20240307 16:52:15.965" endtime="20240307 16:52:15.965"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240307 16:52:15.966" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20240307 16:52:15.965" endtime="20240307 16:52:17.659"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240307 16:52:17.659" endtime="20240307 16:52:17.798"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>*Início teste.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:52:17.798" endtime="20240307 16:52:17.800"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:15.965" endtime="20240307 16:52:17.801"/>
+</kw>
+<kw name="Dado que eu faça o login no portal operador" library="keywords_pedidos">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240307 16:52:17.802" endtime="20240307 16:52:17.804"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240307 16:52:17.804" level="INFO">Opening url 'https://vendas-hom.martinsatacado.com.br/vendas'</msg>
+<status status="PASS" starttime="20240307 16:52:17.804" endtime="20240307 16:52:19.033"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${idrede}</arg>
+<arg>PSANF040</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:52:19.034" level="INFO">Typing text 'PSANF040' into text field '//input[contains(@placeholder,'Digite o ID de rede')]'.</msg>
+<status status="PASS" starttime="20240307 16:52:19.034" endtime="20240307 16:52:19.210"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SenhaRede}</arg>
+<arg>ANA@laine9993</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:52:19.211" level="INFO">Typing text 'ANA@laine9993' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20240307 16:52:19.210" endtime="20240307 16:52:19.319"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:52:19.554" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:52:19.319" endtime="20240307 16:52:19.555"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnContinuar}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:20.555" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:52:19.555" endtime="20240307 16:52:20.555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:52:20.555" endtime="20240307 16:52:20.582"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:52:20.582" level="INFO">Clicking element '//button[contains(.,'Continuar')]'.</msg>
+<status status="PASS" starttime="20240307 16:52:20.582" endtime="20240307 16:52:20.621"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:19.555" endtime="20240307 16:52:20.621"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:17.801" endtime="20240307 16:52:20.621"/>
+</kw>
+<kw name="Insiro o codigo do cliente &quot;1209872&quot;" library="keywords_pedidos" sourcename="Insiro o codigo do cliente &quot;${codcli}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Insiro o codigo do cliente</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240307 16:52:20.623" endtime="20240307 16:52:20.623"/>
+</kw>
+<kw name="sleeping" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:23.624" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240307 16:52:20.624" endtime="20240307 16:52:23.624"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:20.623" endtime="20240307 16:52:23.624"/>
+</kw>
+<kw name="esperar" library="keywords">
+<arg>${CampoCodCliente}</arg>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:52:23.625" endtime="20240307 16:52:23.653"/>
+</kw>
+<msg timestamp="20240307 16:52:23.653" level="INFO">${isVisible} = True</msg>
+<status status="PASS" starttime="20240307 16:52:23.625" endtime="20240307 16:52:23.653"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:25.654" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:52:23.653" endtime="20240307 16:52:25.654"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:23.653" endtime="20240307 16:52:25.654"/>
+</branch>
+<branch type="ELSE">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${isVisible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${element}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</kw>
+<if>
+<branch type="IF" condition="${isVisible} == True">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</kw>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Elemento não encontrado</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</kw>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</branch>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</if>
+<status status="NOT RUN" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.654"/>
+</branch>
+<status status="PASS" starttime="20240307 16:52:23.653" endtime="20240307 16:52:25.654"/>
+</if>
+<status status="PASS" starttime="20240307 16:52:23.624" endtime="20240307 16:52:25.654"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CampoCodCliente}</arg>
+<arg>${codcli}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240307 16:52:25.655" level="INFO">Typing text '1209872' into text field '//input[@type='text']'.</msg>
+<status status="PASS" starttime="20240307 16:52:25.654" endtime="20240307 16:52:25.773"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:52:25.921" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:52:25.774" endtime="20240307 16:52:25.921"/>
+</kw>
+<kw name="click." library="keywords">
+<arg>${BtnProcurar}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:26.923" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:52:25.922" endtime="20240307 16:52:26.923"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:52:26.923" endtime="20240307 16:52:26.944"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:52:26.944" level="INFO">Clicking element 'search-icon-button'.</msg>
+<status status="PASS" starttime="20240307 16:52:26.944" endtime="20240307 16:52:26.999"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:25.921" endtime="20240307 16:52:27.001"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:20.622" endtime="20240307 16:52:27.001"/>
+</kw>
+<kw name="acesso o menu" library="keywords_pedidos">
+<kw name="click." library="keywords">
+<arg>${BtnMenu}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:28.002" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:52:27.001" endtime="20240307 16:52:28.002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240307 16:52:28.002" endtime="20240307 16:52:28.023"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240307 16:52:28.024" level="INFO">Clicking element '//button[@id='open-menu-button']'.</msg>
+<status status="PASS" starttime="20240307 16:52:28.023" endtime="20240307 16:52:28.113"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:27.001" endtime="20240307 16:52:28.113"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:27.001" endtime="20240307 16:52:28.113"/>
+</kw>
+<kw name="Clico em Negociações" library="keywords_pedidos">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:30.114" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240307 16:52:28.114" endtime="20240307 16:52:30.114"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${BTNnegociacoes}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240307 16:52:30.114" level="INFO">Simulating Mouse Over on element '//span[@class='sc-a5de7a8c-10 sc-2bb44b42-5 eIQSuj hjDPll'][contains(.,'Negociações, nota fiscal e boletos por cliente')]'.</msg>
+<status status="PASS" starttime="20240307 16:52:30.114" endtime="20240307 16:52:30.408"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:31.408" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:52:30.408" endtime="20240307 16:52:31.409"/>
+</kw>
+<kw name="Move" library="mouse">
+<arg>380</arg>
+<arg>525</arg>
+<doc>Moves the mouse. If `absolute`, to position (x, y), otherwise move relative
+to the current position. If `duration` is non-zero, animates the movement.</doc>
+<status status="PASS" starttime="20240307 16:52:31.409" endtime="20240307 16:52:31.410"/>
+</kw>
+<kw name="Click" library="mouse">
+<doc>Sends a click with the given button.</doc>
+<status status="PASS" starttime="20240307 16:52:31.410" endtime="20240307 16:52:31.432"/>
+</kw>
+<kw name="sleeping" library="keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:34.434" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240307 16:52:31.433" endtime="20240307 16:52:34.434"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:31.432" endtime="20240307 16:52:34.434"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:28.113" endtime="20240307 16:52:34.434"/>
+</kw>
+<kw name="Fechar o navegador" library="keywords_pedidos" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240307 16:52:35.438" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240307 16:52:34.437" endtime="20240307 16:52:35.438"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240307 16:52:35.556" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240307 16:52:35.438" endtime="20240307 16:52:35.557"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240307 16:52:35.557" endtime="20240307 16:52:37.675"/>
+</kw>
+<status status="PASS" starttime="20240307 16:52:34.436" endtime="20240307 16:52:37.675"/>
+</kw>
+<tag>PedidoBoletoaVista</tag>
+<status status="PASS" starttime="20240307 16:52:15.964" endtime="20240307 16:52:37.676"/>
+</test>
+<doc>teste pipeline</doc>
+<meta name="Charset">UTF-8</meta>
+<status status="FAIL" starttime="20240307 16:50:23.442" endtime="20240307 16:52:37.678"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Pedido</stat>
+<stat pass="1" fail="1" skip="0">PedidoBoletoaVista</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Fluxos">Fluxos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
